@@ -62,8 +62,9 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## DESPUESDE CLONAR EN GITHUB
-1)Composer install para instalar dependencias
-2)Las rutas se encuentran dentro de routes web.php
-3)Crear un archivo .env y generar ahí la conexion a base de datos
-4)El controlador se encuentra dentro de API
-5)El controlador se llama Usuarios y ahí se encuentran los metodos del Crud
+- 1)Composer install para instalar dependencias
+- 2)Las rutas se encuentran dentro de routes web.php
+- 3)Crear un archivo .env y generar ahí la conexion a base de datos, copiar ahí lo que esta en .envexample y cambiar datos de conexión
+- 4)Correr migraciones
+- 4)El controlador se encuentra dentro de API
+- 5)El controlador se llama Usuarios y ahí se encuentran los metodos del Crud
