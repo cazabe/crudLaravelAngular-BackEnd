@@ -65,6 +65,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - 1)Composer install para instalar dependencias
 - 2)Las rutas se encuentran dentro de routes web.php
 - 3)Crear un archivo .env y generar ahí la conexion a base de datos, copiar ahí lo que esta en .envexample y cambiar datos de conexión
-- 4)Correr migraciones
-- 4)El controlador se encuentra dentro de API
-- 5)El controlador se llama Usuarios y ahí se encuentran los metodos del Crud
+- 4) correr migraciones con php artisan make:migrations
+- 5)Correr migraciones
+- 6)El controlador se encuentra dentro de API
+- 7)El controlador se llama Usuarios y ahí se encuentran los metodos del Crud
+- 8)Correr aplicación con php artisan serve

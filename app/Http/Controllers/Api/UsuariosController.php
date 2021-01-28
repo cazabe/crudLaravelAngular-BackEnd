@@ -42,20 +42,22 @@ class UsuariosController extends Controller
         }catch (Exception $e) {
             return response()->json([
                 "message" => "ERROR DE SERVIDOR"
-              ], 400);
+              ], 500);
         }
        
       }
 
+
       //Actualizar usuario
       public function updateUsuario(Request $request, $id) {
         if (Usuarios::where('persona_id', $id)->exists()) {
+
           $usuario = Usuarios::find($id);
   
-          $usuario->nombres = is_null($request->nombres) ? $usuario->nombres : $usuario->nombres;
-          $usuario->apellidos = is_null($request->apellidos) ? $usuario->apellidos : $usuario->apellidos;
-          $usuario->cedula = is_null($request->cedula) ? $usuario->cedula : $usuario->cedula;
-          $usuario->nombres = is_null($request->nombres) ? $usuario->nombres : $usuario->nombres;
+          $usuario->nombres = $request->nombres;
+          $usuario->apellidos = $request->apellidos;
+          $usuario->cedula = $request->cedula;
+          $usuario->estado = $request->estado;
           $usuario->save();
   
           return response()->json([
@@ -67,10 +69,11 @@ class UsuariosController extends Controller
           ], 404);
         }
       }
-
+     
       //Eliminar usuario
       public function deleteUsuario($id) {
         if(Usuarios::where('persona_id', $id)->exists()) {
+          // $usuario = Usuarios::where('persona_id', '=' ,$id)->first();
           $usuario = Usuarios::find($id);
           $usuario->delete();
   

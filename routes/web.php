@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('usuarios', [UsuariosController::class, 'getAllUsuarios']);
-Route::get('usuarios/{id}', [UsuariosController::class, 'getUsuario']);
-Route::post('usuarios', [UsuariosController::class, 'createUsuario']);
-Route::put('usuarios/{id}', [UsuariosController::class, 'updateUsuario']);
-Route::put('usuarios/{id}', [UsuariosController::class, 'deleteUsuario']);
+Route::get('api/personas', [UsuariosController::class, 'getAllUsuarios']);
+Route::get('api/personas/{id}', [UsuariosController::class, 'getUsuario']);
+Route::post('api/personas/create', [UsuariosController::class, 'createUsuario']);
+Route::post('api/personas/update/{id}', [UsuariosController::class, 'updateUsuario']);
+Route::put('api/personas/delete/{id}', [UsuariosController::class, 'deleteUsuario']);
