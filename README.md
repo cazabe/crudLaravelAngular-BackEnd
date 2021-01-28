@@ -64,9 +64,22 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## DESPUESDE CLONAR EN GITHUB
 - 1)Composer install para instalar dependencias
 - 2)Las rutas se encuentran dentro de routes web.php
-- 3)Crear un archivo .env y generar ahí la conexion a base de datos, copiar ahí lo que esta en .envexample y cambiar datos de conexión
+- 3)Crear un archivo .env y generar ahí la conexion a base de datos, copiar ahí lo que  esta en .envexample y cambiar datos de conexión
 - 4) correr migraciones con php artisan migrate
 - 5)Correr migraciones
 - 6)El controlador se encuentra dentro de API
 - 7)El controlador se llama Usuarios y ahí se encuentran los metodos del Crud
 - 8)Correr aplicación con php artisan serve
+## PARA CREAR PROYECTO
+- 1)composer create-project laravel/laravel usuarios_dos
+- 2)cd usuarios_dos
+- 3)php artisan serve
+- 4)Crear modelos => php artisan make:model usuarios -m || -m tambien genera migración
+- 5)Cambiar modelo, agregar protected fillable, primary key como protected tambien
+- 6)Modificar la tabla en migraciones con los campos
+- 7)Correr migraciones => php artisan migrate
+- 8)Crear controladores => php artisan make:controller Api/UsuariosController
+- 9)Copiar los controladores ya realizados
+- 10)Agrerar rutas en routes/web.php
+- 11)Agregar en middleware/VerifyCsrfToken => en protected $execpt  '*' que permita cualquier petición de cualquier parte
+- 11) probar con postman
